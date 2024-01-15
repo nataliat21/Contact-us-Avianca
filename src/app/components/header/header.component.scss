@@ -1,0 +1,15 @@
+// In this section you will find the styles for the logo on mobile devices
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// In this section you will find the styles for the logo on desktop devices
+@media (min-width: 992px){
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
