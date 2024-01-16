@@ -1,6 +1,17 @@
-.ejemplo{
+// Styles for the header section and navigation bar on mobile devices
+.header-navbar__section{
   padding: 12px 14px;
   display: grid;
   grid-template-columns: auto 1fr;
   place-items: center;
+}
+
+// Styles for the header section and navigation bar on desktop devices
+@media (min-width: 992px){
+  .header-navbar__section{
+    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: flex-start;
+
+  }
 }
