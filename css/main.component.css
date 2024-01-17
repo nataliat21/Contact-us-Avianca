@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import of the variables and mixins used in each of the component style sheets.*/
+/*Mixin to set flex align and justification*/
+/*Mixin to set color font, font weight and background color*/
+/*Mixin to set the number of columns and the location of the content within the columns*/
+/* Custom website font */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../src/assets/fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+}
+/* Global styles for the body tag */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main {
+  background-color: aqua;
+}
+.main .main-card {
+  background-color: #FF0000;
+  margin: 0 15px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.main .main-card .main-card__image img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+.main .main-card .main-card__content {
+  margin: 0px 25px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .main-card .main-card__content .main-card__content--text-can {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+.main .main-card .main-card__content .main-card__content--text-do {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.main .main-card .main-card__content .main-card__content--text-information {
+  color: white;
+  font-size: 13px;
+  max-width: 270px;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .main .main-card {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    margin: 0 50px;
+  }
+  .main .main-card .main-card__image img {
+    max-width: 100%;
+    border-radius: 10px 0px 0 10px;
+    height: 100%;
+  }
+  .main .main-card .main-card__content {
+    margin: 0px 25px;
+    justify-content: flex-start;
+    align-self: center;
+  }
+  .main .main-card .main-card__content .main-card__content--text-can {
+    font-size: 35px;
+  }
+  .main .main-card .main-card__content .main-card__content--text-do {
+    font-size: 50px;
+  }
+  .main .main-card .main-card__content .main-card__content--text-information {
+    font-size: 17px;
+    max-width: 350px;
+  }
+}/*# sourceMappingURL=main.component.css.map */
