@@ -1,5 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import of the variables and mixins used in each of the component style sheets.*/
+/* Custom website font */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../src/assets/fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+}
+/* Global styles for the body tag */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar .navbar__menu {
+  display: none;
+}
+.navbar .navbar__button {
+  display: none;
+}
+
 @media (min-width: 992px) {
-  .navbar .navbar__icon {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .navbar__icon .navbar__icon--svg {
     display: none;
+  }
+  .navbar .navbar__menu {
+    display: flex;
+    align-items: center;
+    white-space: wrap;
+  }
+  .navbar .navbar__menu .navbar__menu--link {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    text-align: center;
+  }
+  .navbar .navbar__menu .navbar__menu--link:hover {
+    font-weight: 700;
+    border-bottom: 2px solid #1D9BF0;
+    transition: 0.1s ease;
+  }
+  .navbar .navbar__menu .navbar__menu--link-checkin {
+    text-decoration: none;
+    color: white;
+    background-color: #1D9BF0;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  .navbar .navbar__button {
+    display: block;
+    white-space: nowrap;
+  }
+  .navbar .navbar__button .navbar__button--btn {
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-family: "Red Hat Display", sans-serif;
+    background-color: transparent;
+  }
+  .navbar .navbar__button .navbar__button--btn:hover {
+    background-color: #F0F0F0;
+    transition: 0.3s ease;
   }
 }/*# sourceMappingURL=navbar.component.css.map */

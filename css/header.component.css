@@ -8,9 +8,6 @@
 }
 
 @media (min-width: 992px) {
-  .header {
-    justify-content: flex-start;
-  }
   .header .header__logo--desktop {
     display: block;
   }

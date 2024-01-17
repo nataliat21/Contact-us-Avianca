@@ -1,14 +1,22 @@
-.header-navbar__section {
+.header-navbar__section--mobile {
   padding: 12px 14px;
   display: grid;
   grid-template-columns: auto 1fr;
   place-items: center;
 }
 
+.header-navbar__section--desktop {
+  display: none;
+}
+
 @media (min-width: 992px) {
-  .header-navbar__section {
-    grid-template-columns: 1fr;
-    display: flex;
-    justify-content: flex-start;
+  .header-navbar__section--desktop {
+    margin: 15px 20px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .header-navbar__section--mobile {
+    display: none;
   }
 }/*# sourceMappingURL=app.component.css.map */
