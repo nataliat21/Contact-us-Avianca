@@ -1,0 +1,24 @@
+@import '../styles.scss';
+
+// Styles for the header section and navigation bar on mobile and desktop devices
+.header-navbar__section--mobile{
+  padding: 12px 14px;
+  @include set-template-columns-and-place-items(auto 1fr, center);
+}
+
+.header-navbar__section--desktop{
+  display: none;
+}
+
+@media (min-width: 992px){
+  .header-navbar__section--desktop{
+    margin: 15px 20px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .header-navbar__section--mobile{
+    display: none;
+  }
+}

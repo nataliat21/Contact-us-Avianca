@@ -1,0 +1,69 @@
+@import '../../../styles.scss';
+
+// Styles for the navigation bar on mobile devices
+.navbar{
+  .navbar__menu{
+    display: none;
+  }
+
+  .navbar__button{
+    display: none;
+  }
+}
+
+// Styles for the navigation bar on desktop devices
+@media (min-width: 992px){
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+
+    .navbar__icon{
+      .navbar__icon--svg{
+        display: none;
+      }
+    }
+
+    .navbar__menu{
+      display: flex;
+      align-items: center;
+      white-space: wrap;
+
+      .navbar__menu--link{
+        text-decoration: none;
+        color: $primary-text-color;
+        margin: 0 15px;
+        text-align: center;
+
+        &:hover{
+          font-weight: 700;
+          border-bottom:2px solid $check-in-background-color;
+          transition: 0.1s ease;
+        }
+      }
+
+      .navbar__menu--link-checkin{
+        @include set-color-font-font-weight-background( white,500, $check-in-background-color);
+        text-decoration: none;
+        padding: 3px 10px;
+        border-radius: 10px;
+      }
+    }
+
+    .navbar__button{
+      display: block;
+      white-space: nowrap;
+      .navbar__button--btn{
+        @include set-color-font-font-weight-background( $primary-text-color,700, transparent);
+        font-size: 14px;
+        border-radius: 20px;
+        padding:10px 15px ;
+        font-family:  'Red Hat Display', sans-serif;
+
+        &:hover{
+          background-color: #F0F0F0;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}

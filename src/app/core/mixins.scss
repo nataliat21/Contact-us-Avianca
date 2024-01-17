@@ -1,0 +1,20 @@
+/*Mixin to set flex align and justification*/
+@mixin set-flex-align-and-justify-content($align, $justify-content){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify-content;
+}
+
+/*Mixin to set color font, font weight and background color*/
+@mixin set-color-font-font-weight-background($color-font, $font-weight, $background-color){
+  color: $color-font;
+  font-weight: $font-weight;
+  background-color: $background-color;
+}
+
+/*Mixin to set the number of columns and the location of the content within the columns*/
+@mixin set-template-columns-and-place-items($grid-template-columns, $place-items){
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  place-items: $place-items;
+}

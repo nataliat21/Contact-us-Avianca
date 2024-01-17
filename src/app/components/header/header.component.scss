@@ -1,15 +1,23 @@
+@import '../../../styles.scss';
+
 // In this section you will find the styles for the logo on mobile devices
 .header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include set-flex-align-and-justify-content(center,center);
+
+  .header__logo--desktop{
+    display: none;
+  }
 }
 
 // In this section you will find the styles for the logo on desktop devices
 @media (min-width: 992px){
   .header{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    .header__logo--desktop{
+      display: block;
+    }
+
+    .header__logo--mobile{
+      display: none;
+    }
   }
 }
