@@ -1,13 +1,13 @@
 @import '../../../styles.scss';
 
+// Styles for the main component for mobile devices
 .main{
-  // background-color: $background-main-section;
-  background-color: aqua;
+  margin: 30px 0;
 
+  // Card section
   .main-card{
     background-color: $background-color-card-main-section;
-    margin: 0 15px;
-    height: auto;
+    @include set-margin-and-height(0px 15px, auto);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
     display: grid;
@@ -21,25 +21,19 @@
       }
     }
 
+    // Card content section
     .main-card__content{
-      margin: 0px 25px;
-      height: 180px;
+      @include set-margin-and-height(0px 25px, 180px);
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       .main-card__content--text-can{
-        color: $color-letter-main-section-card;
-        font-size: 22px;
-        font-weight: bold;
-        margin: 0;
+        @include set-font-color-font-size-weight-and-margin($color-letter-main-section-card,22px,bold,0);
       }
 
       .main-card__content--text-do{
-        color: $color-letter-main-section-card;
-        font-size: 30px;
-        font-weight: bold;
-        margin: 0;
+        @include set-font-color-font-size-weight-and-margin($color-letter-main-section-card,30px,bold,0);
       }
 
       .main-card__content--text-information{
@@ -52,13 +46,15 @@
   }
 }
 
+// Styles for the main component for desktop devices
 @media (min-width: 992px){
   .main{
+
+    // Card section
     .main-card{
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr;
-      height: 100%;
-      margin: 0 50px;
+      @include set-margin-and-height(0px 50px, 100%);
 
       .main-card__image{
         img{
@@ -68,11 +64,11 @@
         }
       }
 
+      // Card content section
       .main-card__content{
         margin: 0px 25px;
         justify-content: flex-start;
         align-self: center;
-
 
         .main-card__content--text-can{
           font-size: 35px;
