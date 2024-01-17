@@ -42,13 +42,10 @@
       }
 
       .navbar__menu--link-checkin{
+        @include set-color-font-font-weight-background( white,500, $check-in-background-color);
         text-decoration: none;
-        color: white;
-        background-color: $check-in-background-color;
         padding: 3px 10px;
         border-radius: 10px;
-        font-weight: 500;
-
       }
     }
 
@@ -56,13 +53,11 @@
       display: block;
       white-space: nowrap;
       .navbar__button--btn{
-        color: $primary-text-color;
-        font-weight: 700;
+        @include set-color-font-font-weight-background( $primary-text-color,700, transparent);
         font-size: 14px;
         border-radius: 20px;
         padding:10px 15px ;
         font-family:  'Red Hat Display', sans-serif;
-        background-color: transparent;
 
         &:hover{
           background-color: #F0F0F0;

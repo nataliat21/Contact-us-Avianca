@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* Import of the variables and mixins used in each of the component style sheets.*/
+/*Mixin to set flex align and justification*/
+/*Mixin to set color font, font weight and background color*/
 /* Custom website font */
 @font-face {
   font-family: "Red Hat Display";
@@ -44,12 +46,12 @@ body {
     transition: 0.1s ease;
   }
   .navbar .navbar__menu .navbar__menu--link-checkin {
-    text-decoration: none;
     color: white;
+    font-weight: 500;
     background-color: #1D9BF0;
+    text-decoration: none;
     padding: 3px 10px;
     border-radius: 10px;
-    font-weight: 500;
   }
   .navbar .navbar__button {
     display: block;
@@ -58,11 +60,11 @@ body {
   .navbar .navbar__button .navbar__button--btn {
     color: black;
     font-weight: 700;
+    background-color: transparent;
     font-size: 14px;
     border-radius: 20px;
     padding: 10px 15px;
     font-family: "Red Hat Display", sans-serif;
-    background-color: transparent;
   }
   .navbar .navbar__button .navbar__button--btn:hover {
     background-color: #F0F0F0;

@@ -1,8 +1,8 @@
+@import '../../../styles.scss';
+
 // In this section you will find the styles for the logo on mobile devices
 .header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include set-flex-align-and-justify-content(center,center);
 
   .header__logo--desktop{
     display: none;

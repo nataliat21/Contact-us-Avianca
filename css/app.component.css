@@ -1,3 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import of the variables and mixins used in each of the component style sheets.*/
+/*Mixin to set flex align and justification*/
+/*Mixin to set color font, font weight and background color*/
+/*Mixin to set the number of columns and the location of the content within the columns*/
+/* Custom website font */
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../src/assets/fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+}
+/* Global styles for the body tag */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
 .header-navbar__section--mobile {
   padding: 12px 14px;
   display: grid;
