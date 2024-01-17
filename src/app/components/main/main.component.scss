@@ -1,0 +1,88 @@
+@import '../../../styles.scss';
+
+// Styles for the main component for mobile devices
+.main{
+  margin: 30px 0;
+
+  // Card section
+  .main-card{
+    background-color: $background-color-card-main-section;
+    @include set-margin-and-height(0px 15px, auto);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    .main-card__image{
+      img{
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+      }
+    }
+
+    // Card content section
+    .main-card__content{
+      @include set-margin-and-height(0px 25px, 180px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .main-card__content--text-can{
+        @include set-font-color-font-size-weight-and-margin($color-letter-main-section-card,22px,bold,0);
+      }
+
+      .main-card__content--text-do{
+        @include set-font-color-font-size-weight-and-margin($color-letter-main-section-card,30px,bold,0);
+      }
+
+      .main-card__content--text-information{
+        color: $color-letter-main-section-card;
+        font-size: 13px;
+        max-width: 270px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Styles for the main component for desktop devices
+@media (min-width: 992px){
+  .main{
+
+    // Card section
+    .main-card{
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      @include set-margin-and-height(0px 50px, 100%);
+
+      .main-card__image{
+        img{
+          max-width: 100%;
+          border-radius: 10px 0px 0 10px;
+          height: 100%;
+        }
+      }
+
+      // Card content section
+      .main-card__content{
+        margin: 0px 25px;
+        justify-content: flex-start;
+        align-self: center;
+
+        .main-card__content--text-can{
+          font-size: 35px;
+        }
+
+        .main-card__content--text-do{
+          font-size: 50px;
+        }
+
+        .main-card__content--text-information{
+          font-size: 17px;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}

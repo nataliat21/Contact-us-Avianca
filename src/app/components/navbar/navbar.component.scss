@@ -2,10 +2,13 @@
 
 // Styles for the navigation bar on mobile devices
 .navbar{
+
+  // Styles for navigation bar links
   .navbar__menu{
     display: none;
   }
 
+  // Styles for the navigation bar button
   .navbar__button{
     display: none;
   }
@@ -17,12 +20,14 @@
     display: flex;
     justify-content: space-between;
 
+    // Styles for the hamburger menu icon
     .navbar__icon{
       .navbar__icon--svg{
         display: none;
       }
     }
 
+    // Styles for navigation bar links
     .navbar__menu{
       display: flex;
       align-items: center;
@@ -49,6 +54,7 @@
       }
     }
 
+     // Styles for the navigation bar button
     .navbar__button{
       display: block;
       white-space: nowrap;

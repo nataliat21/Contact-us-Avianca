@@ -18,3 +18,17 @@
   grid-template-columns: $grid-template-columns;
   place-items: $place-items;
 }
+
+/* Mixin to set the font color, font size, font weight and margin*/
+@mixin set-font-color-font-size-weight-and-margin($font-color, $font-size, $font-weight, $margin){
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  margin: $margin;
+}
+
+/*Mixin to set the margin and height */
+@mixin set-margin-and-height($margin, $height){
+  margin: $margin;
+  height: $height;
+}
